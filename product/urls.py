@@ -19,5 +19,6 @@ from django.urls import path,include
 from product import views
 urlpatterns = [
     path('admin/', admin.site.urls),
-path('',views.index)
+path('',views.index),
+path('create/',views.create_product,name = 'create')
 ]
