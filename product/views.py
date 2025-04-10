@@ -1,5 +1,5 @@
 from django.shortcuts import render,redirect
-
+from django.http import HttpResponse
 from product.forms import ProductForm
 from .models import Product
 # Create your views here.
@@ -24,3 +24,10 @@ def detail(request,id_product):
     product=Product.objects.get(id=id_product)
     return render(request,'detail.html',{'product':product})
     
+def delete(request,id_product):
+    try:
+        product=Product.objects.get(id=id_product)
+        product.delete()
+        return redirect('/')
+    except Product.DoesNotExist:
+        return HttpResponse('erorre')

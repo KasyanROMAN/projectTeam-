@@ -14,6 +14,7 @@
     <p>{{i.price}}</p>
     <h2>{{i.company}}</h2>
     <a href="{%url 'detail' i.id%}">Деталі товара</a>
+    <a href="{%url 'delete' i.id%}">видалити продукт</a>
     {% endfor %}
 </body>
 </html>
