@@ -17,3 +17,10 @@ def create_product(request):
         form = ProductForm()
 
     return render(request,'create_product.html',{'form':form})
+
+
+
+def detail(request,id_product):
+    product=Product.objects.get(id=id_product)
+    return render(request,'detail.html',{'product':product})
+    

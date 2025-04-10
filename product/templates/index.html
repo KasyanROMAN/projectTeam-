@@ -7,12 +7,13 @@
 </head>
 <body>
     <h1>список товарів</h1>
-    <a href="{%url 'create'%}">додати товар</a>
+    <a href="{%url 'create'%}">Додати товар</a>
     {% for i in product  %}
     <h1>{{i.name}}</h1>
     <h3>{{i.descriptions}}</h3>
     <p>{{i.price}}</p>
     <h2>{{i.company}}</h2>
+    <a href="{%url 'detail' i.id%}">Деталі товара</a>
     {% endfor %}
 </body>
 </html>
