@@ -31,3 +31,12 @@ def delete(request,id_product):
         return redirect('/')
     except Product.DoesNotExist:
         return HttpResponse('erorre')
+    
+
+def update(request,id_product):
+    product=Product.objects.get(id=id_product)
+    form=ProductForm(request.POST,instance=product)
+    if form.is_valid():
+        form.save()
+        return redirect('/')
+    return render(request,'update.html',{'form':form})
