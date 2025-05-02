@@ -1,6 +1,4 @@
-#!/bin/sh
-'''exec' "/Users/ruslan/Desktop/ПАПКИ1/Роман айти/Новая папка 2/projectTeam-/venv/bin/python3.12" "$0" "$@"
-' '''
+#!/Users/kasyanroman/Desktop/projectTeam-/venv/bin/python3.13
 # -*- coding: utf-8 -*-
 import re
 import sys

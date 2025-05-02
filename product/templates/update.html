@@ -1,16 +1,92 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uk">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Оновлення продукта</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet"/>
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #f3f4f6;
+      margin: 0;
+      padding: 0;
+      color: #1f2937;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: 3rem auto;
+      background-color: white;
+      padding: 2rem;
+      border-radius: 1rem;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.06);
+    }
+
+    h2 {
+      text-align: center;
+      color: #3b82f6;
+      margin-bottom: 2rem;
+      font-size: 1.8rem;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    form p {
+      margin-bottom: 1.2rem;
+    }
+
+    label {
+      font-weight: 600;
+      margin-bottom: 0.3rem;
+      display: block;
+    }
+
+    input, textarea, select {
+      width: 100%;
+      padding: 0.6rem;
+      border: 1px solid #d1d5db;
+      border-radius: 0.5rem;
+      font-size: 1rem;
+      background-color: #f9fafb;
+      transition: border-color 0.2s ease;
+    }
+
+    input:focus, textarea:focus, select:focus {
+      border-color: #3b82f6;
+      outline: none;
+      background-color: #fff;
+    }
+
+    button {
+      background-color: #3b82f6;
+      color: white;
+      padding: 0.75rem;
+      font-size: 1rem;
+      border: none;
+      border-radius: 0.5rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background-color 0.2s ease;
+      margin-top: 1rem;
+    }
+
+    button:hover {
+      background-color: #2563eb;
+    }
+  </style>
 </head>
 <body>
-    <h2>оновлення продукта</h2>
+  <div class="container">
+    <h2>Оновлення продукта</h2>
     <form method="post">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <button type="submit">Save</button>
+      {% csrf_token %}
+      {{ form.as_p }}
+      <button type="submit">💾 Зберегти зміни</button>
     </form>
+  </div>
 </body>
 </html>
